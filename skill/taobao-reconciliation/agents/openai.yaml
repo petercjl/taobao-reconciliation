@@ -1,0 +1,3 @@
+interface:
+  display_name: "淘宝对账"
+  short_description: "分析淘宝店铺收入费用并用独立账户余额检查数据完整性及缺口"

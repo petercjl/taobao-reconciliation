@@ -1,0 +1,45 @@
+{
+  "schema": "portable-skill-capabilities",
+  "schema_version": "1.0.0",
+  "skill": "taobao-reconciliation",
+  "target_platforms": [
+    "codex",
+    "sealseek"
+  ],
+  "capabilities": [
+    {
+      "id": "finance.execute",
+      "purpose": "读取当前CLI契约、调用明确财务取数并生成本地分析",
+      "required": true,
+      "required_features": [
+        "argv-execution",
+        "exit-and-json-capture",
+        "read-files",
+        "create-new-files",
+        "sha256"
+      ],
+      "input_fields": [
+        "argv",
+        "input",
+        "new_output_path"
+      ],
+      "output_fields": [
+        "ok",
+        "artifacts",
+        "metadata",
+        "warnings"
+      ],
+      "side_effects": {
+        "external_mutation": false,
+        "may_cost_money": false,
+        "authorization": "平台只读及新的本地文件；安装更新分别遵循用户授权。"
+      },
+      "errors": [
+        "CAPABILITY_UNAVAILABLE",
+        "AUTH_REQUIRED",
+        "CONTRACT_UNSUPPORTED",
+        "OUTPUT_CONTRACT_FAILED"
+      ]
+    }
+  ]
+}

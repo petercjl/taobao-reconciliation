@@ -1,0 +1,24 @@
+{
+  "schema": "portable-skill-adapter",
+  "platform": "codex",
+  "mappings": [
+    {
+      "capability_id": "finance.execute",
+      "status": "implemented",
+      "features": [
+        "argv-execution",
+        "exit-and-json-capture",
+        "read-files",
+        "create-new-files",
+        "sha256"
+      ],
+      "implementation": {
+        "type": "host-terminal-and-files",
+        "discovery": "使用当前平台公布的终端与文件能力，从PATH发现tbcli和taobao-reconciliation，验证版本及capabilities。",
+        "execution": "执行参数化命令，保留退出码及JSON；按新路径写文件；通过Node crypto验证SHA-256。",
+        "normalization": "返回ok、artifacts、metadata、warnings；能力缺失返回CAPABILITY_UNAVAILABLE。",
+        "limitations": "Codex/macOS本轮实现；SealSeek和Windows尚待实际运行验证。"
+      }
+    }
+  ]
+}

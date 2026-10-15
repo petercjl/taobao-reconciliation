@@ -1,0 +1,33 @@
+{
+  "name": "@petercjl/taobao-reconciliation",
+  "version": "0.0.0-bootstrap.0",
+  "description": "淘宝店铺收入费用分析与独立账户余额完整性自检",
+  "type": "module",
+  "bin": {
+    "taobao-reconciliation": "bin/taobao-reconciliation.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "skill",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petercjl/taobao-reconciliation.git"
+  },
+  "homepage": "https://github.com/petercjl/taobao-reconciliation#readme",
+  "bugs": {
+    "url": "https://github.com/petercjl/taobao-reconciliation/issues"
+  }
+}
