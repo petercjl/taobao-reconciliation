@@ -1,6 +1,6 @@
 {
   "name": "@petercjl/taobao-reconciliation",
-  "version": "0.0.0-bootstrap.0",
+  "version": "0.1.0",
   "description": "淘宝店铺收入费用分析与独立账户余额完整性自检",
   "type": "module",
   "bin": {
